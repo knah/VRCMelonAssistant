@@ -1,0 +1,202 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:VRCMelonAssistant"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="ResourceDictionaryName">i18n:ja-JP</sys:String>
+
+    <!-- App -->
+    <sys:String x:Key="App:InstallDirDialog:Title">VRChatがインストールされているフォルダを発見することができませんでした！</sys:String>
+    <sys:String x:Key="App:InstallDirDialog:OkCancel">OKを押すことで再試行できます。キャンセルを押すとこのままアプリケーションを終了します。</sys:String>
+    <sys:String x:Key="App:InvalidArgument">引数が正しくありません! '{0}' の引数が必須です。</sys:String>
+    <sys:String x:Key="App:UnrecognizedArgument">引数が理解できませんでした。VRChat Melon Assistantを終了します.</sys:String>
+    <sys:String x:Key="App:UnhandledException">ぬるぽ(An unhandled exception just occurred)</sys:String>
+    <sys:String x:Key="App:Exception">Exception</sys:String>
+
+    <!-- Main Window -->
+    <sys:String x:Key="MainWindow:WindowTitle">VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="MainWindow:IntroButton">始めに</sys:String>
+    <sys:String x:Key="MainWindow:ModsButton">Mod一覧</sys:String>
+    <sys:String x:Key="MainWindow:AboutButton">About</sys:String>
+    <sys:String x:Key="MainWindow:OptionsButton">設定</sys:String>
+    <sys:String x:Key="MainWindow:GameVersionLabel">ゲームバージョン</sys:String>
+    <sys:String x:Key="MainWindow:VersionLabel">Version</sys:String>
+    <sys:String x:Key="MainWindow:ModInfoButton">Mod情報</sys:String>
+    <sys:String x:Key="MainWindow:InstallButtonTop">インストール</sys:String>
+    <sys:String x:Key="MainWindow:InstallButtonBottom">もしくは 更新</sys:String>
+    <sys:String x:Key="MainWindow:NoModSelected">Modが選択されていません！</sys:String>
+    <sys:String x:Key="MainWindow:NoModInfoPage">このModはMod情報が存在しません: {0}</sys:String>
+
+    <!-- Intro Page -->
+    <sys:String x:Key="Intro:Title">Intro</sys:String>
+    <sys:String x:Key="Intro:PageTitle">VRChat Melon Assistantへようこそ</sys:String>
+    <sys:String x:Key="Intro:Terms:Header">このページ全体をしっかりと読み、同意できる場合のみご利用ください</sys:String>
+    <Span x:Key="Intro:Terms:Line1">
+        このプログラムを使用する場合、以下の利用規約に同意してもらう必要があります:
+    </Span>
+    <Span x:Key="Intro:Terms:Line2">
+        VRChatはクライアントを改造することを
+        <Bold>規約により明示的に禁止しています。</Bold> これは言い換えると次の通りです:
+    </Span>
+    <Span x:Key="Intro:Terms:Term0">
+        クライアントを改造することはVRChatにより
+        <Bold>Banされる危険性を孕んでいます</Bold>。 このインストーラーで利用できるModは、その可能性を最小限にするためにコミュニティにより手動でチェックされておりますが、規約で禁止されている以上<Bold>リスクは常に存在します</Bold>。
+    </Span>
+    <Span x:Key="Intro:Terms:Term1">
+        モッド(Mods)はVRChatの更新により
+        <Bold>動作しなくなる可能性があります</Bold>。これは一般的なことで、
+        <Bold>VRChat側の問題ではありません</Bold>。
+    </Span>
+    <Span x:Key="Intro:Terms:Term2">
+        モッド(Mods)はしばしば新たなバグやパフォーマンス上の問題を
+        <Bold>引き起こすことがあります</Bold>。これは
+        <Bold>VRChat側の問題ではありません</Bold>。
+    </Span>
+    <Span x:Key="Intro:Terms:Term3">
+        モッド（Mods）は
+        <Bold>無償で時間が空いている時に制作されております</Bold>。
+        ご理解とご協力をお願いいたします。
+    </Span>
+    <Span x:Key="Intro:ReviewsBeatGamesFault">
+        Modが壊れたことについて<Bold>VRChatの運営に苦情を入れることはやめてください！！！！！</Bold>
+        VRChatの運営の落ち度ではありません。
+        <LineBreak/> そういったことをしない限り彼らは今のところはModを殺そうとしているわけではない。可能性が高いです。
+    </Span>
+    <Span x:Key="Intro:ReportIssuesNoMods">
+        もしゲームの問題についてVRChatチームに報告する場合は、まず一旦全てのMods、MelonLoaderを削除したうえで引き続き問題が起こるかについて
+        検証してください。つまり: <Bold>その問題がModに起因するものかどうかを確認してください</Bold>。
+    </Span>
+    <Span x:Key="Intro:ReviewsRustySpoon">
+        開発者（VRChatの運営に限らず、Modの開発者にも）に対して批判をするのはやめて下さい。
+        <LineBreak/>もしModの開発者がそれに辟易してサポートしなくなった場合、<Bold>コミュニティ全体に被害を被ることになります</Bold>。
+    </Span>
+    <Span x:Key="Intro:WikiGuide">
+        もしこの活動に協力してくれるのであれば、
+        <Hyperlink local:HyperlinkExtensions.IsExternal="True" NavigateUri="https://discord.gg/rCqKSvR">
+            VRChat Modding Group discord
+        </Hyperlink> からさらなる情報や質問、サポートを受けることができます。是非ご参加ください。
+    </Span>
+    <sys:String x:Key="Intro:AgreeButton">規約を理解し、同意します</sys:String>
+    <sys:String x:Key="Intro:DisagreeButton">同意しません</sys:String>
+    <sys:String x:Key="Intro:ClosingApp">アプリケーションを終了します: 規約に同意できない場合は、このアプリケーションを使用することはできません。</sys:String>
+    <sys:String x:Key="Intro:VersionDownloadFailed">バージョン情報をダウンロードすることができませんでした</sys:String>
+    <sys:String x:Key="Intro:ModsTabDisabled">Mods tabは無効化されています。再起動してもう一度お試しください。</sys:String>
+    <sys:String x:Key="Intro:ModsTabEnabled">Mods tabが有効化されました!Mods tabから確認してみてください。</sys:String>
+
+    <!-- Mods Page -->
+    <sys:String x:Key="Mods:Title">Mods</sys:String>
+    <sys:String x:Key="Mods:Header:Name">名称</sys:String>
+    <sys:String x:Key="Mods:Header:Author">作者</sys:String>
+    <sys:String x:Key="Mods:Header:Installed">インストール済み</sys:String>
+    <sys:String x:Key="Mods:Header:Latest">最新版</sys:String>
+    <sys:String x:Key="Mods:Header:Description">説明</sys:String>
+    <sys:String x:Key="Mods:Header:Uninstall">アンインストール</sys:String>
+    <sys:String x:Key="Mods:UninstallButton">アンインストール</sys:String>
+    <sys:String x:Key="Mods:LoadFailed">Mod一覧を読み込むことができませんでした。</sys:String>
+    <sys:String x:Key="Mods:CheckingInstalledMods">インストール済みのModを確認中です...</sys:String>
+    <sys:String x:Key="Mods:LoadingMods">Modを読み込み中です...</sys:String>
+    <sys:String x:Key="Mods:FinishedLoadingMods">Modの読み込みが完了しました</sys:String>
+    <sys:String x:Key="Mods:NoMods">Modが存在しません</sys:String>
+    <sys:String x:Key="Mods:InstallingMod">インストール中: {0}</sys:String>
+    <sys:String x:Key="Mods:InstalledMod">インストール完了: {0}</sys:String>
+    <sys:String x:Key="Mods:UnInstallingMelonLoader">MelonLoaderをアンインストール中です</sys:String>
+    <sys:String x:Key="Mods:DownloadingMelonLoader">MelonLoaderをインストール中です</sys:String>
+    <sys:String x:Key="Mods:UnpackingMelonLoader">MelonLoaderを解凍中です</sys:String>
+    <sys:String x:Key="Mods:FinishedInstallingMods">Finished installing mods</sys:String>
+    <sys:String x:Key="Mods:ModDownloadLinkMissing">ダウンロードリンクを確認できませんでした: {0}</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Title">このModをアンインストールしますか？ {0}</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Body1">このModをアンインストールしようとしています: {0}。続行しますか？</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Body2">場合によっては他のModの前提になっていることもあります。</sys:String>
+    <sys:String x:Key="Mods:UninstallSingleFailed">アンインストールに失敗しました。VRChatが起動していないことをご確認ください。</sys:String>
+    <sys:String x:Key="Mods:UninstallMLFailed">MelonLoaderのアンインストールに失敗しました。VRChatが起動していないことをご確認ください。</sys:String>
+    <sys:String x:Key="Mods:InstallMLFailed">MelonLoaderのインストールに失敗しました。スタンドアロン版のインストーラをダウンロードし、インストールすることをおすすめします。</sys:String>
+    <sys:String x:Key="Mods:FailedExtract">解凍に失敗しました: {0}。 {1} 秒後に再試行します... ({2}/{3})</sys:String>
+    <sys:String x:Key="Mods:FailedExtractMaxReached">解凍に失敗しました: {0}。 何度か再試行しましたが成功しませんでしたので、({1}回), スキップします。 このModは正常に動作しない可能性がありますので、ご自身の責任で進めてください。</sys:String>
+    <sys:String x:Key="Mods:SearchLabel">入力して検索...</sys:String>
+
+    <!-- About Page -->
+    <sys:String x:Key="About:Title">このツールについて</sys:String>
+    <sys:String x:Key="About:PageTitle">About VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="About:List:Header">VRChat Melon Assistantは、Beat Saber用のMod Assistantのフォーク版です。</sys:String>
+    <Span x:Key="About:SupportAssistant">
+        <Hyperlink local:HyperlinkExtensions.IsExternal="True" NavigateUri="https://github.com/Assistant/ModAssistant">
+            Mod Assistant GitHub repo
+        </Hyperlink>
+        に訪問することで彼らの活動を支援することができます！
+    </Span>
+    <sys:String x:Key="About:SpecialThanks">スペシャルサンクス ♥</sys:String>
+    <sys:String x:Key="About:Donate">寄付</sys:String>
+    <sys:String x:Key="About:HeadpatsButton">Headpats</sys:String>
+    <sys:String x:Key="About:HugsButton">Hugs</sys:String>
+
+    <!-- Options Page -->
+    <sys:String x:Key="Options:Title">設定</sys:String>
+    <sys:String x:Key="Options:PageTitle">設定画面</sys:String>
+    <sys:String x:Key="Options:InstallFolder">VRChatクライアント インストールフォルダ</sys:String>
+    <sys:String x:Key="Options:SelectFolderButton">フォルダを選択...</sys:String>
+    <sys:String x:Key="Options:OpenFolderButton">フォルダを表示する</sys:String>
+    <sys:String x:Key="Options:SaveSelectedMods">指定したModを保存する</sys:String>
+    <sys:String x:Key="Options:CheckInstalledMods">インストール済みのModを検出する</sys:String>
+    <sys:String x:Key="Options:SelectInstalledMods">インストール済みのModを選択</sys:String>
+    <sys:String x:Key="Options:ReinstallInstalledMods">インストール済みのModを再インストールする</sys:String>
+    <sys:String x:Key="Options:CloseWindow">作業が完了したらウィンドウを閉じる</sys:String>
+    <sys:String x:Key="Options:GameType">Game Type</sys:String>
+    <sys:String x:Key="Options:GameType:Steam">Steam</sys:String>
+    <sys:String x:Key="Options:GameType:Oculus">Oculus</sys:String>
+    <sys:String x:Key="Options:Tools">Tools</sys:String>
+    <sys:String x:Key="Options:InstallPlaylist">Install Playlist</sys:String>
+    <sys:String x:Key="Options:InstallingPlaylist">Installing Playlist: {0}</sys:String>
+    <sys:String x:Key="Options:FailedPlaylistSong">Failed song: {0}</sys:String>
+    <sys:String x:Key="Options:FinishedPlaylist">[{0} fails] Finished Installing Playlist: {1}</sys:String>
+    <sys:String x:Key="Options:Diagnostics">診断機能</sys:String>
+    <sys:String x:Key="Options:OpenLogsButton">ログフォルダを開く</sys:String>
+    <sys:String x:Key="Options:OpenAppDataButton">[AppData] フォルダを開く</sys:String>
+    <sys:String x:Key="Options:RemoveAllModsButton">全てのModを削除する</sys:String>
+    <sys:String x:Key="Options:RemoveMLButton">MelonLoaderを削除する</sys:String>
+    <sys:String x:Key="Options:InstallMLButton">MelonLoaderをインストールする</sys:String>
+    <sys:String x:Key="Options:ApplicationTheme">アプリケーションテーマ(外観)</sys:String>
+    <sys:String x:Key="Options:ExportTemplateButton">テンプレートを保存</sys:String>
+    <sys:String x:Key="Options:GettingModList">Mod一覧を取得</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:Title">全てのModをアンインストールしますか？</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:RemoveAllMods">本当に現在インストールしているすべてのModをアンインストールしますか？</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:CannotBeUndone">この処理は取り消すことができません。必要な場合はバックアップしてから続行してください。</sys:String>
+    <sys:String x:Key="Options:AllModsUninstalled">全てのModをアンインストールしました</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:Title">MelonLoaderをアンインストールしますか？</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:RemoveAllMods">本当に現在インストールしているMelonLoaderをアンインストールしますか？</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:CannotBeUndone">現在インストールしているModとそれに関連したデータはそのまま維持されます。</sys:String>
+    <sys:String x:Key="Options:MLUninstalled">MelonLoader をアンインストールしました</sys:String>
+    <sys:String x:Key="Options:MLInstalled">MelonLoader をインストールしました！</sys:String>
+    <sys:String x:Key="Options:CurrentThemeRemoved">現在選択しているテーマは削除されました。標準のテーマに戻します...</sys:String>
+    <sys:String x:Key="Options:ThemeFolderNotFound">テーマフォルダが見つかりません！標準のテーマを出力します...</sys:String>
+    <sys:String x:Key="Options:AppDataNotFound">AppData フォルダが見つかりません！ 一度VRChatを起動し、生成されたことを確認したうえで再度実行してください。</sys:String>
+
+    <!-- Loading Page -->
+    <sys:String x:Key="Loading:Loading">Modをロード中...</sys:String>
+
+    <!-- Themes Class -->
+    <sys:String x:Key="Themes:ThemeNotFound">テーマが見つかりません。標準のテーマに戻します...</sys:String>
+    <sys:String x:Key="Themes:ThemeSet">テーマを{0}に変更しました。</sys:String>
+    <sys:String x:Key="Themes:ThemeMissing">テーマ:{0} が見つかりません。</sys:String>
+    <sys:String x:Key="Themes:SavedTemplateTheme">テーマテンプレート &quot;{0}&quot; をテーマフォルダに保存しました。</sys:String>
+    <sys:String x:Key="Themes:TemplateThemeExists">選択したテンプレートテーマは既に存在します！</sys:String>
+    <sys:String x:Key="Themes:FailedToLoadXaml">Failed to load .xaml file for theme {0}: {1}</sys:String>
+
+    <!-- Updater Class -->
+    <sys:String x:Key="Updater:CheckFailed">アップデートの確認に失敗しました。</sys:String>
+    <sys:String x:Key="Updater:DownloadFailed">アップデートファイルのダウンロードに失敗しました。</sys:String>
+
+    <!-- Utils Class -->
+    <sys:String x:Key="Utils:NotificationTitle">VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="Utils:NoInstallFolder">VRChatのインストールフォルダを検出できませんでした。手動で選択してください。</sys:String>
+    <sys:String x:Key="Utils:RunAsAdmin">VRChat Melon Assistantは、管理者権限で実行する必要があります（管理者権限下のフォルダを操作するため）。再度お試しください。</sys:String>
+    <sys:String x:Key="Utils:InstallDir:DialogTitle">VRChatのインストールフォルダを選択します。</sys:String>
+    <sys:String x:Key="Utils:CannotOpenFolder">以下のフォルダを開くことができませんでした: {0}</sys:String>
+
+    <sys:String x:Key="ModInfoWindow:Title">Mod情報: {0}</sys:String>
+    <sys:String x:Key="ModInfoWindow:Author">作者: {0}</sys:String>
+    <sys:String x:Key="ModInfoWindow:NoAuthor">作者不明</sys:String>
+    <sys:String x:Key="ModInfoWindow:NoDescription">概要に記述がありません</sys:String>
+    <sys:String x:Key="ModInfoWindow:DownloadLink">ダウンロードリンク: </sys:String>
+    <sys:String x:Key="ModInfoWindow:SourceCodeLink">ソースコード: </sys:String>
+    <sys:String x:Key="ModInfoWindow:InternalIds">Internal ID: {0} {1}</sys:String>
+</ResourceDictionary>
