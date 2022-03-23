@@ -515,7 +515,10 @@ namespace VRCMelonAssistant.Pages
             {
                 Animate(SearchBar, 16, 0, new TimeSpan(0, 0, 0, 0, 300));
                 Animate(SearchText, 16, 0, new TimeSpan(0, 0, 0, 0, 300));
-                ModsListView.Items.Filter = null;
+                if (!FilteredToInstalled)
+                {
+                    ModsListView.Items.Filter = null;
+                }
             }
         }
 
@@ -535,11 +538,16 @@ namespace VRCMelonAssistant.Pages
         private bool SearchFilter(object mod)
         {
             ModListItem item = mod as ModListItem;
-            if (item.ModName.ToLower().Contains(SearchBar.Text.ToLower())) return true;
-            if (item.ModDescription.ToLower().Contains(SearchBar.Text.ToLower())) return true;
-            if (item.ModName.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
-            if (item.ModDescription.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
-            return false;
+            if (FilteredToInstalled && !item.IsInstalled) return false;
+            if (SearchBar.Height != 0)
+            {
+                if (item.ModName.ToLower().Contains(SearchBar.Text.ToLower())) return true;
+                if (item.ModDescription.ToLower().Contains(SearchBar.Text.ToLower())) return true;
+                if (item.ModName.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
+                if (item.ModDescription.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
+                return false;
+            }
+            return true;
         }
 
         private void InstalledButton_Click(object sender, RoutedEventArgs e)
@@ -547,13 +555,12 @@ namespace VRCMelonAssistant.Pages
             if (!FilteredToInstalled)
             {
                 FilteredToInstalled = true;
-                ModsListView.Items.Filter = new Predicate<object>(InstalledFilter);
             }
             else
             {
-                ModsListView.Items.Filter = null;
                 FilteredToInstalled = false;
             }
+            ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
         }
 
         private bool InstalledFilter(object mod)
