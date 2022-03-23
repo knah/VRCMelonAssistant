@@ -91,7 +91,19 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn x:Name="InstalledColumn" Header="{DynamicResource Mods:Header:Installed}">
+                            <GridViewColumn x:Name="InstalledColumn">
+                                <GridViewColumn.Header>
+                                    <Button
+                                        Name="InstalledButton"
+                                        Margin="-5"
+                                        Padding="9,-1,9,0"
+                                        Background="#00000000"
+                                        BorderThickness="0"
+                                        Click="InstalledButton_Click"
+                                        Content="{DynamicResource Mods:Header:Installed}"
+                                        FontSize="11"
+                                    />
+                                </GridViewColumn.Header>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock

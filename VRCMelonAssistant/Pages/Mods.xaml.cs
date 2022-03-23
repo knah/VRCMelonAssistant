@@ -40,6 +40,7 @@ namespace VRCMelonAssistant.Pages
         public CollectionView view;
         public bool PendingChanges;
         public bool HaveInstalledMods;
+        public bool FilteredToInstalled = false;
 
         private readonly SemaphoreSlim _modsLoadSem = new SemaphoreSlim(1, 1);
 
@@ -538,6 +539,27 @@ namespace VRCMelonAssistant.Pages
             if (item.ModDescription.ToLower().Contains(SearchBar.Text.ToLower())) return true;
             if (item.ModName.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
             if (item.ModDescription.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
+            return false;
+        }
+
+        private void InstalledButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!FilteredToInstalled)
+            {
+                FilteredToInstalled = true;
+                ModsListView.Items.Filter = new Predicate<object>(InstalledFilter);
+            }
+            else
+            {
+                ModsListView.Items.Filter = null;
+                FilteredToInstalled = false;
+            }
+        }
+
+        private bool InstalledFilter(object mod)
+        {
+            ModListItem item = mod as ModListItem;
+            if (item.IsInstalled) return true;
             return false;
         }
 
