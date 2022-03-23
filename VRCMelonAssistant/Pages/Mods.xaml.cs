@@ -522,6 +522,7 @@ namespace VRCMelonAssistant.Pages
                 {
                     ModsListView.Items.Filter = ModsListView.Items.Filter;
                 }
+                // Only null this if both filters (search and installed) are off
                 else
                 {
                     ModsListView.Items.Filter = null;
@@ -545,7 +546,9 @@ namespace VRCMelonAssistant.Pages
         private bool SearchFilter(object mod)
         {
             ModListItem item = mod as ModListItem;
+            // If the installed filter is on, don't search the text of mods that aren't installed
             if (FilteredToInstalled && !item.IsInstalled) return false;
+            // SearchBar.Height does not adjust fast enough to be used here, FilteredBySearch is changed at the same time
             if (FilteredBySearch)
             {
                 if (item.ModName.ToLower().Contains(SearchBar.Text.ToLower())) return true;
@@ -567,13 +570,6 @@ namespace VRCMelonAssistant.Pages
         {
             FilteredToInstalled = false;
             ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
-        }
-
-        private bool InstalledFilter(object mod)
-        {
-            ModListItem item = mod as ModListItem;
-            if (item.IsInstalled) return true;
-            return false;
         }
 
         private void Animate(TextBlock target, double oldHeight, double newHeight, TimeSpan duration)
