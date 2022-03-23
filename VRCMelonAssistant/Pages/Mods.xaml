@@ -93,15 +93,15 @@
 
                             <GridViewColumn x:Name="InstalledColumn">
                                 <GridViewColumn.Header>
-                                    <Button
+                                    <CheckBox
                                         Name="InstalledButton"
-                                        Margin="-5"
+                                        Margin="7,-5,-5,-5"
                                         Padding="9,-1,9,0"
                                         Background="#00000000"
                                         BorderThickness="0"
-                                        Click="InstalledButton_Click"
                                         Content="{DynamicResource Mods:Header:Installed}"
                                         FontSize="11"
+                                        IsChecked="False" Checked="InstalledButton_Checked" Unchecked="InstalledButton_Unchecked"
                                     />
                                 </GridViewColumn.Header>
                                 <GridViewColumn.CellTemplate>
