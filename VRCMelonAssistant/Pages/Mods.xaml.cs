@@ -40,6 +40,8 @@ namespace VRCMelonAssistant.Pages
         public CollectionView view;
         public bool PendingChanges;
         public bool HaveInstalledMods;
+        public bool FilteredToInstalled = false;
+        public bool FilteredBySearch = false;
 
         private readonly SemaphoreSlim _modsLoadSem = new SemaphoreSlim(1, 1);
 
@@ -508,19 +510,29 @@ namespace VRCMelonAssistant.Pages
                 SearchBar.Focus();
                 Animate(SearchBar, 0, 16, new TimeSpan(0, 0, 0, 0, 300));
                 Animate(SearchText, 0, 16, new TimeSpan(0, 0, 0, 0, 300));
+                FilteredBySearch = true;
                 ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
             }
             else
             {
                 Animate(SearchBar, 16, 0, new TimeSpan(0, 0, 0, 0, 300));
                 Animate(SearchText, 16, 0, new TimeSpan(0, 0, 0, 0, 300));
-                ModsListView.Items.Filter = null;
+                FilteredBySearch = false;
+                if (FilteredToInstalled)
+                {
+                    ModsListView.Items.Filter = ModsListView.Items.Filter;
+                }
+                // Only null this if both filters (search and installed) are off
+                else
+                {
+                    ModsListView.Items.Filter = null;
+                }
             }
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
+            ModsListView.Items.Filter = ModsListView.Items.Filter;
             if (SearchBar.Text.Length > 0)
             {
                 SearchText.Text = null;
@@ -534,11 +546,30 @@ namespace VRCMelonAssistant.Pages
         private bool SearchFilter(object mod)
         {
             ModListItem item = mod as ModListItem;
-            if (item.ModName.ToLower().Contains(SearchBar.Text.ToLower())) return true;
-            if (item.ModDescription.ToLower().Contains(SearchBar.Text.ToLower())) return true;
-            if (item.ModName.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
-            if (item.ModDescription.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
-            return false;
+            // If the installed filter is on, don't search the text of mods that aren't installed
+            if (FilteredToInstalled && !item.IsInstalled) return false;
+            // SearchBar.Height does not adjust fast enough to be used here, FilteredBySearch is changed at the same time
+            if (FilteredBySearch)
+            {
+                if (item.ModName.ToLower().Contains(SearchBar.Text.ToLower())) return true;
+                if (item.ModDescription.ToLower().Contains(SearchBar.Text.ToLower())) return true;
+                if (item.ModName.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
+                if (item.ModDescription.ToLower().Replace(" ", string.Empty).Contains(SearchBar.Text.ToLower().Replace(" ", string.Empty))) return true;
+                return false;
+            }
+            return true;
+        }
+
+        private void InstalledButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FilteredToInstalled = true;
+            ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
+        }
+
+        private void InstalledButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            FilteredToInstalled = false;
+            ModsListView.Items.Filter = new Predicate<object>(SearchFilter);
         }
 
         private void Animate(TextBlock target, double oldHeight, double newHeight, TimeSpan duration)
