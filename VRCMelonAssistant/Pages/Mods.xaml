@@ -101,8 +101,9 @@
                                         BorderThickness="0"
                                         Content="{DynamicResource Mods:Header:Installed}"
                                         FontSize="11"
-                                        IsChecked="False" Checked="InstalledButton_Checked" Unchecked="InstalledButton_Unchecked"
-                                    />
+                                        IsChecked="False"
+                                        Checked="InstalledButton_Checked"
+                                        Unchecked="InstalledButton_Unchecked" />
                                 </GridViewColumn.Header>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
