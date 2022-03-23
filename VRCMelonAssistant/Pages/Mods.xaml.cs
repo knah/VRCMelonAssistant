@@ -597,6 +597,5 @@ namespace VRCMelonAssistant.Pages
             if (selectedMod == null) return;
             MainWindow.ShowModInfoWindow(selectedMod.ModInfo);
         }
-
     }
 }
