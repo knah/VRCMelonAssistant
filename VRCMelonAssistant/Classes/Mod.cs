@@ -25,6 +25,7 @@ namespace VRCMelonAssistant
             public string modType;
             public string author;
             public string description;
+            public string[] requirements;
             public string downloadLink;
             public string sourceLink;
             public string hash;
