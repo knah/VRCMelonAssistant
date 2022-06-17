@@ -20,6 +20,13 @@ namespace VRCMelonAssistant
             ModAuthor.Text = string.Format((string) FindResource("ModInfoWindow:Author"), mod.versions[0].author ?? FindResource("ModInfoWindow:NoAuthor"));
             ModVersion.Text = mod.versions[0].modVersion;
 
+            var modReq = "";
+            foreach (var requirement in mod.versions[0].requirements)
+            {
+                modReq += $"{requirement}\n";
+            }
+            ModRequirements.Text = modReq;
+
             var dlLink = mod.versions[0].downloadLink;
             DownloadLink.Text = (string) FindResource("ModInfoWindow:DownloadLink");
             DownloadLink.Inlines.Add(new Run(" "));

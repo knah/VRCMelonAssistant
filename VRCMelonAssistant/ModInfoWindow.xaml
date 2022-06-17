@@ -16,6 +16,7 @@
                 <TextBlock />
                 <TextBlock Name="ModDescription" TextWrapping="Wrap" />
                 <TextBlock />
+                <TextBlock Name="ModRequirements" TextWrapping="Wrap" />
                 <TextBlock Name="SourceCodeLink" />
                 <TextBlock Name="DownloadLink" />
                 <TextBlock Name="InternalIds" />
