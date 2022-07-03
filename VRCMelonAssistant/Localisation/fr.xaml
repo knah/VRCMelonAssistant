@@ -1,0 +1,205 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:VRCMelonAssistant"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="ResourceDictionaryName">i18n:fr-FR</sys:String>
+
+    <!-- App -->
+    <sys:String x:Key="App:InstallDirDialog:Title">Impossible de trouver le dossier d'installation de VRCHAT.</sys:String>
+    <sys:String x:Key="App:InstallDirDialog:OkCancel">Appuyez sur OK pour réessayer ou Fermer pour fermer l'application.</sys:String>
+    <sys:String x:Key="App:InvalidArgument">Argument Invalide ! '{0}' Nécessite une option.</sys:String>
+    <sys:String x:Key="App:UnrecognizedArgument">Argument non reconnu. Fermeture du VRCMelonAssistant.</sys:String>
+    <sys:String x:Key="App:UnhandledException">Une exception non prise en charge vient d'avoir lieu.</sys:String>
+    <sys:String x:Key="App:Exception">Exception</sys:String>
+
+    <!-- Main Window -->
+    <sys:String x:Key="MainWindow:WindowTitle">VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="MainWindow:IntroButton">Intro</sys:String>
+    <sys:String x:Key="MainWindow:ModsButton">Mods</sys:String>
+    <sys:String x:Key="MainWindow:AboutButton">A Propos</sys:String>
+    <sys:String x:Key="MainWindow:OptionsButton">Options</sys:String>
+    <sys:String x:Key="MainWindow:GameVersionLabel">Version du Jeu</sys:String>
+    <sys:String x:Key="MainWindow:VersionLabel">Version</sys:String>
+    <sys:String x:Key="MainWindow:ModInfoButton">Mod Info</sys:String>
+    <sys:String x:Key="MainWindow:InstallButtonTop">Installer</sys:String>
+    <sys:String x:Key="MainWindow:InstallButtonBottom">ou Mettre à Jour</sys:String>
+    <sys:String x:Key="MainWindow:NoModSelected">Aucun mod sélectionné.</sys:String>
+    <sys:String x:Key="MainWindow:NoModInfoPage">{0} n'as pas de page d'infos.</sys:String>
+
+    <!-- Intro Page -->
+    <sys:String x:Key="Intro:Title">Intro</sys:String>
+    <sys:String x:Key="Intro:PageTitle">Bienvenue dans VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="Intro:Terms:Header">Veuillez lire cette page entierement et attentivement.</sys:String>
+    <Span x:Key="Intro:Terms:Line1">
+        En utilisant ce programme vous attestez avoir lu et accepté les termes suivants:
+    </Span>
+    <Span x:Key="Intro:Terms:Line2">
+        VRChat
+        <Bold>interdit formellement</Bold> de modder le client de jeu dans leur TOS (Terms of Service) Ce qui signifie:
+    </Span>
+    <Span x:Key="Intro:Terms:Term0">
+        Modder son client
+        <Bold>peut</Bold> vous causer un ban. Les Mods disponible via l'intalleur sont vérifiés manuellement afin de minimiser les risques de se faire ban, mais <Bold>les risques sont toujours présent</Bold>.
+    </Span>
+    <Span x:Key="Intro:Terms:Term1">
+        Les Mods
+        <Bold>ne marcheront plus</Bold> à chaque mise à jour. C'est normal, et ce
+        <Bold>n'est pas de la faute de</Bold> VRChat.
+    </Span>
+    <Span x:Key="Intro:Terms:Term2">
+        Les Mods
+        <Bold>vont</Bold> causer des bugs et des problèmes de performance. Ceci
+        <Bold>n'est pas de la faute de</Bold> VRChat.
+    </Span>
+    <Span x:Key="Intro:Terms:Term3">
+        Les Mods sont
+        <Bold>gratuits</Bold> et sont fait par des gens pendant leur
+        <Bold>temps libre.</Bold> S'il vous plait soyez patients et compréhensifs.
+    </Span>
+    <Span x:Key="Intro:ReviewsBeatGamesFault">
+        <Bold>NE VOUS</Bold> plaignez pas à l'équipe de VRCHAT que les mods sont cassés / bug. Ceci
+        <Bold>n'est pas de la faute de</Bold> VRChat.
+        <LineBreak/> Ils n'ont pas l'intention de détruire le modding.
+    </Span>
+    <Span x:Key="Intro:ReportIssuesNoMods">
+        Si vous voulez reporter un problème avec le jeu à l'équipe de VRCHAT, <Bold>assurez vous que le problème n'est pas causé par un mod.</Bold>
+        <LineBreak />Pour ce faire, supprimez tous vos mods et/ou MelonLoader et vérifiez si le problème est toujours présent.
+    </Span>
+    <Span x:Key="Intro:ReviewsRustySpoon">
+        Si je continue de voir des gens se plaindre aux devs
+        <Italic>parce que</Italic> des mods sont cassés,
+        <LineBreak/>
+        <Bold>Je vais personnellement mettre le modding en miettes. Et je le ferai de bon coeur.</Bold>
+    </Span>
+    <Span x:Key="Intro:WikiGuide">
+        N'hésitez pas à rejoindre le
+        <Hyperlink local:HyperlinkExtensions.IsExternal="True" NavigateUri="https://discord.gg/rCqKSvR">
+           Discord: VRChat Modding Group
+        </Hyperlink> pour plus d'infos, d'aide, et d'assistance.
+    </Span>
+    <sys:String x:Key="Intro:AgreeButton">J'accepte</sys:String>
+    <sys:String x:Key="Intro:DisagreeButton">Je refuse</sys:String>
+    <sys:String x:Key="Intro:ClosingApp">Fermeture de l'Application: Vous n'avez pas accepté les termes et conditions.</sys:String>
+    <sys:String x:Key="Intro:VersionDownloadFailed">Impossible de télécharger la liste des versions.</sys:String>
+    <sys:String x:Key="Intro:ModsTabDisabled">Onglet Mods désactivé. Veuillez redémarrer pour réessayer.</sys:String>
+    <sys:String x:Key="Intro:ModsTabEnabled">Vous pouvez maintenant utiliser l'onglet Mods!</sys:String>
+
+    <!-- Mods Page -->
+    <sys:String x:Key="Mods:Title">Mods</sys:String>
+    <sys:String x:Key="Mods:Header:Name">Nom</sys:String>
+    <sys:String x:Key="Mods:Header:Author">Auteur</sys:String>
+    <sys:String x:Key="Mods:Header:Installed">Installé</sys:String>
+    <sys:String x:Key="Mods:Header:Latest">Dernier</sys:String>
+    <sys:String x:Key="Mods:Header:Description">Description</sys:String>
+    <sys:String x:Key="Mods:Header:Uninstall">Désinstaller</sys:String>
+    <sys:String x:Key="Mods:UninstallButton">Désinstaller</sys:String>
+    <sys:String x:Key="Mods:LoadFailed">Impossible de charger la liste des mods</sys:String>
+    <sys:String x:Key="Mods:CheckingInstalledMods">Vérification des mods installés</sys:String>
+    <sys:String x:Key="Mods:LoadingMods">Chargement des Mods</sys:String>
+    <sys:String x:Key="Mods:FinishedLoadingMods">Mods Chargés</sys:String>
+    <sys:String x:Key="Mods:NoMods">Aucun mods disponible</sys:String>
+    <sys:String x:Key="Mods:InstallingMod">Installation {0}</sys:String>
+    <sys:String x:Key="Mods:InstalledMod">Installé {0}</sys:String>
+    <sys:String x:Key="Mods:UnInstallingMelonLoader">Désinstallation de MelonLoader</sys:String>
+    <sys:String x:Key="Mods:DownloadingMelonLoader">Téléchargement de MelonLoader</sys:String>
+    <sys:String x:Key="Mods:UnpackingMelonLoader">Décompression de MelonLoader</sys:String>
+    <sys:String x:Key="Mods:FinishedInstallingMods">Installation des mods terminée</sys:String>
+    <sys:String x:Key="Mods:ModDownloadLinkMissing">Impossible de trouver un lien de téléchargement pour {0}</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Title">Désinstaller {0}?</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Body1">Êtes vous certain de vouloir désinstaller {0}?</sys:String>
+    <sys:String x:Key="Mods:UninstallBox:Body2">Ceci pourrait casser d'autres mods</sys:String>
+    <sys:String x:Key="Mods:UninstallSingleFailed">Erreur de désinstallation du mod. Assurez vous que VRChat n'est pas lancé.</sys:String>
+    <sys:String x:Key="Mods:UninstallMLFailed">Erreur de désinstallation de MelonLoader. Assurez vous que VRChat n'est pas lancé.</sys:String>
+    <sys:String x:Key="Mods:InstallMLFailed">Erreur d'installation de MelonLoader. Essayez d'utiliser l'installeur standalone.</sys:String>
+    <sys:String x:Key="Mods:FailedExtract">Echec de l'extraction de {0}, veuillez réessayer dans {1} secondes. ({2}/{3})</sys:String>
+    <sys:String x:Key="Mods:FailedExtractMaxReached">Echec de l'extraction de {0} après un nombre total d'essais de ({1}), skip du mod. Ce mod pourrait ne pas marcher correctement, utilisez le à vos propres risques.</sys:String>
+    <sys:String x:Key="Mods:SearchLabel">Recherche...</sys:String>
+
+    <!-- About Page -->
+    <sys:String x:Key="About:Title">A Propos</sys:String>
+    <sys:String x:Key="About:PageTitle">A propos de VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="About:List:Header">VRChat Melon Assistant est un fork de l'assistant d'installation de mod pour Beat Saber.</sys:String>
+    <Span x:Key="About:SupportAssistant">
+        Visitez le repository GitHub de 
+        <Hyperlink local:HyperlinkExtensions.IsExternal="True" NavigateUri="https://github.com/Assistant/ModAssistant">
+            Mod Assistant
+        </Hyperlink>
+        pour soutenir leur travail et/ou leur faire une donation !
+    </Span>
+    <sys:String x:Key="About:SpecialThanks">Remerciements ♥</sys:String>
+    <sys:String x:Key="About:Donate">Faire un Don</sys:String>
+    <sys:String x:Key="About:HeadpatsButton">Headpats</sys:String>
+    <sys:String x:Key="About:HugsButton">Hugs</sys:String>
+
+    <!-- Options Page -->
+    <sys:String x:Key="Options:Title">Options</sys:String>
+    <sys:String x:Key="Options:PageTitle">Paramètres</sys:String>
+    <sys:String x:Key="Options:InstallFolder">Dossier d'installation</sys:String>
+    <sys:String x:Key="Options:SelectFolderButton">Sélectionner le dossier</sys:String>
+    <sys:String x:Key="Options:OpenFolderButton">Ouvrir le dossier</sys:String>
+    <sys:String x:Key="Options:SaveSelectedMods">Sauvegardez les mods sélectionnés</sys:String>
+    <sys:String x:Key="Options:CheckInstalledMods">Détecter les mods installés</sys:String>
+    <sys:String x:Key="Options:SelectInstalledMods">Sélectionner les mods installés</sys:String>
+    <sys:String x:Key="Options:ReinstallInstalledMods">Réinstaller les mods installés</sys:String>
+    <sys:String x:Key="Options:CloseWindow">Fermer la fenêtre une fois terminé</sys:String>
+    <sys:String x:Key="Options:GameType">Plateforme</sys:String>
+    <sys:String x:Key="Options:GameType:Steam">Steam</sys:String>
+    <sys:String x:Key="Options:GameType:Oculus">Oculus</sys:String>
+    <sys:String x:Key="Options:Tools">Outils</sys:String>
+    <sys:String x:Key="Options:InstallPlaylist">Installer la Playlist</sys:String>
+    <sys:String x:Key="Options:InstallingPlaylist">Installation de la Playlist: {0}</sys:String>
+    <sys:String x:Key="Options:FailedPlaylistSong">Echec de lecture de la musique: {0}</sys:String>
+    <sys:String x:Key="Options:FinishedPlaylist">[{0} échecs] Fin d'installation de la Playlist: {1}</sys:String>
+    <sys:String x:Key="Options:Diagnostics">Diagnostique</sys:String>
+    <sys:String x:Key="Options:OpenLogsButton">Ouvrir les Logs</sys:String>
+    <sys:String x:Key="Options:OpenAppDataButton">Ouvrir AppData</sys:String>
+    <sys:String x:Key="Options:RemoveAllModsButton">Supprimer tous les mods</sys:String>
+    <sys:String x:Key="Options:RemoveMLButton">Supprimer MelonLoader</sys:String>
+    <sys:String x:Key="Options:InstallMLButton">Installer MelonLoader</sys:String>
+    <sys:String x:Key="Options:ApplicationTheme">Theme de l'Application</sys:String>
+    <sys:String x:Key="Options:ExportTemplateButton">Exporter comme Template</sys:String>
+    <sys:String x:Key="Options:GettingModList">Obtention de la liste de Mods</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:Title">Désinstaller tous les mods ?</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:RemoveAllMods">Êtes vous certain de vouloir désinstaller TOUS les mods ?</sys:String>
+    <sys:String x:Key="Options:YeetModsBox:CannotBeUndone">Ceci est irréversible.</sys:String>
+    <sys:String x:Key="Options:AllModsUninstalled">Tous les mods ont étés désinstallés</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:Title">Désinstaller MelonLoader?</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:RemoveAllMods">Êtes vous certain de vouloir désinstaller MelonLoader?</sys:String>
+    <sys:String x:Key="Options:YeetMLBox:CannotBeUndone">Tous vos mods et données de mods resteront intacts.</sys:String>
+    <sys:String x:Key="Options:MLUninstalled">MelonLoader désinstallé</sys:String>
+    <sys:String x:Key="Options:MLInstalled">MelonLoader installé</sys:String>
+    <sys:String x:Key="Options:CurrentThemeRemoved">Le theme actuel a été supprimé, retour à celui par défaut...</sys:String>
+    <sys:String x:Key="Options:ThemeFolderNotFound">Le dossier de Themes est introuvable! Essayez d'exporter le template...</sys:String>
+    <sys:String x:Key="Options:AppDataNotFound">Le dossier AppData est introuvable! Essayez de lancer votre jeu.</sys:String>
+
+    <!-- Loading Page -->
+    <sys:String x:Key="Loading:Loading">Chargement des mods</sys:String>
+
+    <!-- Themes Class -->
+    <sys:String x:Key="Themes:ThemeNotFound">Theme introuvable, retour à celui par défaut...</sys:String>
+    <sys:String x:Key="Themes:ThemeSet">Application du Theme {0}.</sys:String>
+    <sys:String x:Key="Themes:ThemeMissing">{0} n'existe pas.</sys:String>
+    <sys:String x:Key="Themes:SavedTemplateTheme">Template theme &quot;{0}&quot; sauvegardé dans le dossier Themes.</sys:String>
+    <sys:String x:Key="Themes:TemplateThemeExists">Template theme existe déjà !</sys:String>
+    <sys:String x:Key="Themes:FailedToLoadXaml">Impossible de charger le fichier .xaml pour le theme {0}: {1}</sys:String>
+
+    <!-- Updater Class -->
+    <sys:String x:Key="Updater:CheckFailed">Impossible de vérifier les mises à jour.</sys:String>
+    <sys:String x:Key="Updater:DownloadFailed">Impossible de télécharger la mise à jour.</sys:String>
+
+    <!-- Utils Class -->
+    <sys:String x:Key="Utils:NotificationTitle">VRChat Melon Assistant</sys:String>
+    <sys:String x:Key="Utils:NoInstallFolder">n'a pas pu détecter votre dossier d'installation de VRChat. Veuillez le sélectionner manuellement.</sys:String>
+    <sys:String x:Key="Utils:RunAsAdmin">VRChat Melon Assistant à besoin d'être exécuté en Administrateur. Veuillez réessayer.</sys:String>
+    <sys:String x:Key="Utils:InstallDir:DialogTitle">Sélectionner votre dossier d'installation de VRChat</sys:String>
+    <sys:String x:Key="Utils:CannotOpenFolder">n'a pas pu ouvrir le dossier: {0}</sys:String>
+
+    <sys:String x:Key="ModInfoWindow:Title">Information du mod {0}</sys:String>
+    <sys:String x:Key="ModInfoWindow:Author">Auteur: {0}</sys:String>
+    <sys:String x:Key="ModInfoWindow:NoAuthor">Auteur inconnu</sys:String>
+    <sys:String x:Key="ModInfoWindow:NoDescription">Pas de description disponible</sys:String>
+    <sys:String x:Key="ModInfoWindow:DownloadLink">Lien de téléchargement: </sys:String>
+    <sys:String x:Key="ModInfoWindow:SourceCodeLink">Code source: </sys:String>
+    <sys:String x:Key="ModInfoWindow:InternalIds">Internal ID: {0} {1}</sys:String>
+</ResourceDictionary>
